@@ -1,9 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>My Projects</h2>
-<ul>
-    <li>Student Management System</li>
-    <li>CRM System</li>
-    <li>Blog Website</li>
-</ul>
+<h2 class="mb-4 text-center fade-in">My Projects</h2>
+
+<div class="row g-4 fade-in">
+
+    <div class="col-md-4">
+        <div class="card project-card p-3">
+            <h5>Student Management System</h5>
+            <p>Manage students, results, and records.</p>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card project-card p-3">
+            <h5>CRM System</h5>
+            <p>Customer relationship and lead tracking.</p>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card project-card p-3">
+            <h5>Blog Website</h5>
+            <p>Post articles with admin dashboard.</p>
+        </div>
+    </div>
+
+</div>
 {% endblock %}
