@@ -1,5 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Contact Me</h2>
-<p>Email: your@email.com</p>
+
+<h2 class="text-center mb-4">Contact Me</h2>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="alert alert-success text-center">
+      {{ messages[0] }}
+    </div>
+  {% endif %}
+{% endwith %}
+
+<form method="POST" class="col-md-6 mx-auto">
+
+    <input type="text" name="name" placeholder="Your Name" class="form-control mb-3" required>
+
+    <input type="email" name="email" placeholder="Your Email" class="form-control mb-3" required>
+
+    <textarea name="message" placeholder="Your Message" class="form-control mb-3" rows="4" required></textarea>
+
+    <button type="submit" class="btn btn-dark w-100">Send Message</button>
+
+</form>
+
 {% endblock %}
